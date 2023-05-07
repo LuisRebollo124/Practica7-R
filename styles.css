@@ -17,7 +17,7 @@ main{
     top:100px;
     bottom:0;
     width:100%;
-    background-color: #FFFFFF;
+    background-color: white;
 }
 aside section{
     display:inline-block;
