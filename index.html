@@ -5,9 +5,37 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>index</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<aside>
+    <section id="fondo">
+        <h2>Fondo</h2>
+        <label for="rojo">Rojo</label>
+        <input type="number" id="rojo" value="255">
+        <label for="verde">Verde</label>
+        <input type="number" id="verde" value="255">
+        <label for="azul">Azul</label>
+        <input type="number" id="azul" value="255">
+    </section>
+    <section id="mosca">
+        <h2>Mosca</h2>
+        <p>
+            <label for="x">Posición x</label>
+            <input type="number" id="x" min="0" max="9999" value="0">
+            <label for="y">Posición y</label>
+            <input type="number" id="y" min="0" max="9999" value="0">
+        </p>
+        <label for="rotacion">Rotación</label>
+        <input type="number" min="0" max="360" id="rotacion" value="0">
+        <button id="anadir">Nueva mosca</button>
+    </section>
+</aside>
+<main>
+    <div class="mosca seleccionada" data-x="0" data-y="0" data-rotacion="0"></div>
+</main>
 
+<script src="java.js"></script>
 </body>
 </html>
