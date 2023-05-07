@@ -13,11 +13,11 @@
     <section id="fondo">
         <h2>Fondo</h2>
         <label for="rojo">Rojo</label>
-        <input type="number" id="rojo" value="255">
+        <input type="number" id="rojo" value="255" max="255">
         <label for="verde">Verde</label>
-        <input type="number" id="verde" value="255">
+        <input type="number" id="verde" value="255" max="255">
         <label for="azul">Azul</label>
-        <input type="number" id="azul" value="255">
+        <input type="number" id="azul" value="255" max="255">
     </section>
     <section id="mosca">
         <h2>Mosca</h2>
@@ -27,14 +27,13 @@
             <label for="y">Posición y</label>
             <input type="number" id="y" min="0" max="9999" value="0">
         </p>
-        <label for="rotacion">Rotación</label>
-        <input type="number" min="0" max="360" id="rotacion" value="0">
-        <button id="anadir">Nueva mosca</button>
+        <label for="rotar">Rotación</label>
+        <input type="number" min="0" max="360" id="rotar" value="0">
+        <button id="añadir">Nueva mosca</button>
     </section>
 </aside>
-<main>
+<main id="fondoo">
     <img src="fly.svg" class="mosca">
-    <div class="mosca seleccionada" data-x="0" data-y="0" data-rotacion="0"></div>
 </main>
 <script src="java.js"></script>
 </body>
