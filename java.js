@@ -1,4 +1,4 @@
-window.addEventListener("DOMContentLoaded",(e)=>{
+window.addEventListener("DOMContentLoaded",function (e){
 
     let mosca=document.getElementById("mosca");
     let x=document.getElementById("x");
@@ -8,9 +8,34 @@ window.addEventListener("DOMContentLoaded",(e)=>{
     let rojo=document.getElementById("rojo");
     let verde=document.getElementById("verde");
     let azul=document.getElementById("azul");
-    let Rojo=0;
-    let Verde=0;
-    let Azul=0;
+    let R=255;
+    let V=255;
+    let A=255;
+
+    rojo.addEventListener("change",function (e){
+        R=rojo.value;
+        if (R<128){
+            R=128
+            rojo.value=128
+        }
+        fondo.style.backgroundColor=`rgb(${R},${V},${A})`;
+    });
+    azul.addEventListener("change",function (e){
+        A=azul.value;
+        if (A<128){
+            A=128
+            azul.value=128
+        }
+        fondo.style.backgroundColor=`rgb(${R},${V},${A})`;
+    });
+    verde.addEventListener("change",function (e){
+        V=verde.value;
+        if (V<128){
+            V=128
+            verde.value=128
+        }
+        fondo.style.backgroundColor=`rgb(${R},${V},${A})`;
+    });
 
     x.addEventListener("change",function (e){
         mosca.style.left=`(${mosca})`;
@@ -20,16 +45,6 @@ window.addEventListener("DOMContentLoaded",(e)=>{
     });
     rotar.addEventListener("change",function (e){
         mosca.style.rotate=`(${mosca})`;
-    });
-
-    rojo.addEventListener("change",function (e){
-        fondo.style.backgroundColor=`rgb(${Rojo},${Verde},${Azul})`;
-    });
-    azul.addEventListener("change",function (e){
-        fondo.style.backgroundColor=`rgb(${Rojo},${Verde},${Azul})`;
-    });
-    verde.addEventListener("change",function (e){
-        fondo.style.backgroundColor=`rgb(${Rojo},${Verde},${Azul})`;
     });
 
 });
