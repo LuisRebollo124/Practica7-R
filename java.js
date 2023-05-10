@@ -1,10 +1,10 @@
 window.addEventListener("DOMContentLoaded",function (e){
 
-    let mosca=document.getElementById("mosca");
-    let x=document.getElementById("x");
-    let y=document.getElementById("y");
-    let rotar=document.getElementById("rotar");
-    let fondo= document.getElementById("fondoo")
+    let mosca=document.querySelector(".mosca");
+    let tx=document.getElementById("x");
+    let ty=document.getElementById("y");
+    let trotar=document.getElementById("rotar");
+    let fondo= document.querySelector("main");
     let rojo=document.getElementById("rojo");
     let verde=document.getElementById("verde");
     let azul=document.getElementById("azul");
@@ -37,14 +37,17 @@ window.addEventListener("DOMContentLoaded",function (e){
         fondo.style.backgroundColor=`rgb(${R},${V},${A})`;
     });
 
-    x.addEventListener("change",function (e){
-        mosca.style.left=`(${mosca})`;
+    tx.addEventListener("change",function (e){
+        let x = tx.value;
+        mosca.style.left=x+"px";
     });
-    y.addEventListener("change",function (e){
-        mosca.style.top=`(${mosca})`;
+    ty.addEventListener("change",function (e){
+        let y = ty.value;
+        mosca.style.top=y+"px";
     });
-    rotar.addEventListener("change",function (e){
-        mosca.style.rotate=`(${mosca})`;
+    trotar.addEventListener("change",function (e){
+        let r = trotar.value;
+        mosca.style.rotate=r+"deg";
     });
 
 });
