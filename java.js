@@ -11,6 +11,7 @@ window.addEventListener("DOMContentLoaded",function (e){
     let R=255;
     let V=255;
     let A=255;
+    let btNuevo=document.getElementById("añadir");
 
     rojo.addEventListener("change",function (e){
         R=rojo.value;
@@ -49,5 +50,17 @@ window.addEventListener("DOMContentLoaded",function (e){
         let r = trotar.value;
         mosca.style.rotate=r+"deg";
     });
+
+    btNuevo.addEventListener("click",function (e){
+        let nuevaMosca=document.createElement("div");
+        nuevaMosca.classList.add("mosca");
+        nuevaMosca.classList.add("seleccionada");
+        main.append(nuevaMosca);
+        mosca.classList.remove("seleccionada");
+        mosca=nuevaMosca;
+        tx.value=0
+        trotar.value=0
+        ty.value=0
+    })
 
 });

@@ -28,5 +28,17 @@ aside section{
     position:absolute;
     width:80px;
     height:80px;
-    background-size: cover;
+    background-image:url("fly.svg") ;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}.
+ mosca seleccionada{
+    position:absolute;
+    width:80px;
+    height:80px;
+    background-image:url("fly2.svg") ;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
+
+
